@@ -5,10 +5,15 @@
   <!-- Meta Tags -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Preconnect for performance -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a101e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=yes">
+  <!-- Preconnect & Preload for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="assets/img/hero-bg-1.jpg" as="image">
+  <link rel="preload" href="assets/img/section/hero-img.jpg" as="image">
   <meta name="author" content="Barış Can Yonel">
   <meta name="description" content="Tokat web site oluşturma, Tokat internet sitesi yapımı - Profesyonel web tasarım. Responsive tasarım, SEO optimizasyonu, e-ticaret. Tokat'ta web sitesi ihtiyaçlarınız için 7/24 destek.">
   <meta name="keywords" content="Tokat web site, Tokat internet sitesi, Tokat web tasarım, Tokat web sitesi oluşturma, Tokat internet sitesi yapımı, Tokat e-ticaret, Tokat kurumsal web sitesi, web tasarım Tokat">
@@ -32,26 +37,43 @@
   <meta name="twitter:image" content="https://www.bariscanyonel.com/assets/img/section/hero-img.jpg">
   <!-- Page Title -->
   <title>Barış Can Yonel | Tokat Web Site | Tokat Internet Sitesi Oluşturma</title>
-  <!-- Schema.org LocalBusiness & Person -->
+  <!-- Schema.org LocalBusiness, Person & WebSite -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Person"],
-    "name": "Barış Can Yonel - Tokat Web Tasarım",
-    "description": "Tokat web site oluşturma, Tokat internet sitesi yapımı ve profesyonel web tasarım hizmetleri",
-    "url": "https://www.bariscanyonel.com",
-    "image": "https://www.bariscanyonel.com/assets/img/section/hero-img.jpg",
-    "areaServed": "Tokat, Türkiye",
-    "email": "info@bariscanyonel.com",
-    "telephone": "+90-530-112-94-40",
-    "priceRange": "Ücretsiz Keşif Görüşmesi",
-    "serviceType": ["Web Tasarım", "Tokat web site", "Internet sitesi oluşturma", "E-ticaret", "SEO"],
-    "sameAs": [
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "Person"],
+      "name": "Barış Can Yonel - Tokat Web Tasarım",
+      "description": "Tokat web site oluşturma, Tokat internet sitesi yapımı ve profesyonel web tasarım hizmetleri",
+      "url": "https://www.bariscanyonel.com",
+      "image": "https://www.bariscanyonel.com/assets/img/section/hero-img.jpg",
+      "areaServed": {"@type": "City", "name": "Tokat", "containedInPlace": {"@type": "Country", "name": "Türkiye"}},
+      "address": {"@type": "PostalAddress", "addressLocality": "Tokat", "addressCountry": "TR"},
+      "email": "info@bariscanyonel.com",
+      "telephone": "+90-530-112-94-40",
+      "priceRange": "Ücretsiz Keşif Görüşmesi",
+      "serviceType": ["Web Tasarım", "Tokat web site", "Internet sitesi oluşturma", "E-ticaret", "SEO"],
+"sameAs": [
       "https://www.linkedin.com/in/bariscanyonel/",
+      "https://medium.com/@baris60",
       "https://www.instagram.com/webtasarimtokat/",
       "https://wa.me/905301129440"
     ]
-  }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Barış Can Yonel - Tokat Web Tasarım",
+      "url": "https://www.bariscanyonel.com",
+      "description": "Tokat web site, Tokat internet sitesi oluşturma ve profesyonel web tasarım hizmetleri",
+      "inLanguage": "tr-TR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.bariscanyonel.com/blog/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
   </script>
   <!-- Favicon & App Icons -->
   <link rel="icon" type="image/png" href="https://www.bariscanyonel.com/assets/img/favicon.png" sizes="32x32" />
@@ -67,17 +89,18 @@
 </head>
 
 <body id="home">
+  <a href="#main-content" class="st-skip-link">İçeriğe atla</a>
   <!-- Start Header Section -->
-  <header class="st-site-header st-style1 st-sticky-header">
+  <header class="st-site-header st-style1 st-sticky-header" role="banner">
     <div class="st-main-header">
       <div class="container">
         <div class="st-main-header-in">
           <div class="st-main-header-left">
-            <a class="st-site-branding st-branding-mobile" href="https://www.bariscanyonel.com/">
-              <span class="st-logo-img"><img src="assets/img/logo.png" alt="Barış Can Yonel" loading="lazy"></span>
+            <a class="st-site-branding st-branding-mobile" href="https://www.bariscanyonel.com/" aria-label="Ana sayfaya git">
+              <span class="st-logo-img"><img src="assets/img/logo.png" alt="Barış Can Yonel - Tokat Web Tasarım" width="75" height="75" loading="lazy"></span>
             </a>
           </div>
-          <div class="st-nav st-nav-center-wrap">
+          <nav class="st-nav st-nav-center-wrap" role="navigation" aria-label="Ana menü">
             <ul class="st-nav-list st-onepage-nav">
               <li class="st-nav-mobile-logo">
                 <a href="https://www.bariscanyonel.com/" class="st-mobile-menu-logo">
@@ -97,8 +120,8 @@
               <li class="st-nav-group st-nav-right"><a href="#blog-seo" class="st-smooth-move">Blog</a></li>
               <li class="st-nav-group st-nav-right"><a href="#contact" class="st-smooth-move">İletişim</a></li>
             </ul>
-          </div>
           <div class="sp-phone st-nav-phone">
+                <a href="https://medium.com/@baris60" class="st-nav-social-icon" target="_blank" rel="noopener" title="Medium" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
                 <svg viewBox="0 0 513.64 513.64">
                   <g>
                     <g>
@@ -108,19 +131,20 @@
                 </svg>
                 <div class="sp-phone-no"><a href="tel:905301129440" style="color:inherit;text-decoration:none;">7/24 Destek</a></div>
               </div>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
   </header>
   <!-- End Header Section -->
 
+  <main id="main-content">
   <!-- Start Hero Seciton -->
-  <section class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" data-src='assets/img/hero-bg-1.jpg'>
+  <section class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" data-src='assets/img/hero-bg-1.jpg' aria-labelledby="hero-heading">
     <div class="container">
       <div class="st-hero-text">
-        <div class="st-author"><img src="assets/img/section/hero-img.jpg" alt="Barış Can Yonel - Web Tasarım Uzmanı"></div>
-        <h1>Barış Can Yonel | Tokat Web Site ve Internet Sitesi Oluşturma Uzmanı</h1>
+        <div class="st-author"><img src="assets/img/section/hero-img.jpg" alt="Barış Can Yonel - Tokat Web Tasarım Uzmanı" width="200" height="200" fetchpriority="high"></div>
+        <h1 id="hero-heading">Barış Can Yonel | Tokat Web Site ve Internet Sitesi Oluşturma Uzmanı</h1>
         <p>Internet sitesi oluşturma ve Tokat web site oluşturma konusunda uzmanım. Modern, hızlı ve güvenilir web tasarım projeleri hazırlıyorum. <br>Responsive tasarım, SEO optimizasyonu ve e-ticaret çözümleri sunuyorum.</p>
         <div class="st-hero-social-links">
           <a href="https://www.bariscanyonel.com/" class="st-social-btn" target="_blank" rel="noopener" title="Web Sitesi">
@@ -128,6 +152,9 @@
           </a>
           <a href="https://www.linkedin.com/in/bariscanyonel/" class="st-social-btn" target="_blank" rel="noopener" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://medium.com/@baris60" class="st-social-btn" target="_blank" rel="noopener" title="Medium">
+            <i class="fab fa-medium-m"></i>
           </a>
           <a href="https://www.instagram.com/webtasarimtokat/" class="st-social-btn" target="_blank" rel="noopener" title="Instagram">
             <i class="fab fa-instagram"></i>
@@ -145,10 +172,10 @@
   <section id="about" class="st-about-wrap" itemscope itemtype="https://schema.org/AboutPage">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">HAKKIMIZDA</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">HAKKIMIZDA</p>
         <h2 class="st-section-heading-subtitle">TOKAT WEB SİTE UZMANI</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
     <div class="container">
@@ -234,10 +261,10 @@
   <section>
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">HİZMETLER</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">HİZMETLER</p>
         <h2 class="st-section-heading-subtitle">HİZMETLER</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
 
@@ -473,10 +500,10 @@
   <section class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">BECERİLERİM</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">BECERİLERİM</p>
         <h2 class="st-section-heading-subtitle">BECERİLERİM</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
 
@@ -584,10 +611,10 @@
   <section id="resume" class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">ÖZGEÇMİŞ</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">ÖZGEÇMİŞ</p>
         <h2 class="st-section-heading-subtitle">ÖZGEÇMİŞ</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
     <div class="container">
@@ -684,10 +711,10 @@
   <section id="portfolio">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">PROJELER</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">PROJELER</p>
         <h2 class="st-section-heading-subtitle">REFERANS PROJELER</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
     <div class="container">
@@ -803,10 +830,10 @@
   <section id="references" class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">REFERANSLAR</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">REFERANSLAR</p>
         <h2 class="st-section-heading-subtitle">MÜŞTERİ YORUMLARI</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
 
@@ -933,10 +960,10 @@
   <section id="blog">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">PROJELERİMİZ & REFERANSLAR</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">PROJELERİMİZ & REFERANSLAR</p>
         <h2 class="st-section-heading-subtitle">ÇALIŞMALARIMIZ VE MÜŞTERİLERİMİZ</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
 
@@ -990,10 +1017,10 @@
   <section id="blog-seo" class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">BLOG</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">BLOG</p>
         <h2 class="st-section-heading-subtitle">TOKAT WEB SİTE & İNTERNET SİTESİ REHBERİ</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
     <div class="container">
@@ -1049,10 +1076,10 @@
   <section id="contact" class="st-dark-bg">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
-      <div class="st-section-heading st-style1">
-        <h4 class="st-section-heading-title">İLETİŞİM</h4>
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">İLETİŞİM</p>
         <h2 class="st-section-heading-subtitle">İLETİŞİM</h2>
-      </div>
+      </header>
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
 
@@ -1122,6 +1149,10 @@
                   <span class="st-social-icon"><i class="fas fa-blog"></i></span>
                   <span class="st-icon-name">Blog</span>
                 </a>
+                <a href="https://medium.com/@baris60" class="st-social-btn" target="_blank" rel="noopener" title="Medium">
+                  <span class="st-social-icon"><i class="fab fa-medium-m"></i></span>
+                  <span class="st-icon-name">Medium</span>
+                </a>
                 <a href="https://www.linkedin.com/in/bariscanyonel/" class="st-social-btn" target="_blank" rel="noopener" title="LinkedIn">
                   <span class="st-social-icon"><i class="fab fa-linkedin-in"></i></span>
                   <span class="st-icon-name">LinkedIn</span>
@@ -1143,9 +1174,10 @@
     <div class="st-height-b100 st-height-lg-b80"></div>
   </section>
   <!-- End Contact Seciton -->
+  </main>
 
   <!-- Start Footer Seciton -->
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
       <div class="st-copyright-wrap">
         <a href="https://www.bariscanyonel.com/" target="_blank" class="st-footer-brand">
@@ -1153,6 +1185,7 @@
         </a>
         <div class="st-footer-social">
           <a href="https://www.linkedin.com/in/bariscanyonel/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://medium.com/@baris60" target="_blank" rel="noopener" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
           <a href="https://www.instagram.com/webtasarimtokat/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/905301129440" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
@@ -1162,12 +1195,12 @@
   </footer>
   <!-- End Footer Seciton -->
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery-1.12.4.min.js"></script>
-  <script src="assets/js/jquery.slick.min.js"></script>
-  <script src="assets/js/lightgallery.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/ripples.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- Scripts (defer for performance) -->
+  <script src="assets/js/jquery-1.12.4.min.js" defer></script>
+  <script src="assets/js/jquery.slick.min.js" defer></script>
+  <script src="assets/js/lightgallery.min.js" defer></script>
+  <script src="assets/js/wow.min.js" defer></script>
+  <script src="assets/js/ripples.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

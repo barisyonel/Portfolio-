@@ -37,6 +37,41 @@
 /*--------------------------------------------------------------
 1. Typography
 ----------------------------------------------------------------*/
+/* Skip link (accessibility) */
+.st-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;
+  padding: 12px 24px;
+  background: #fec544;
+  color: #0a101e;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: top 0.3s ease;
+}
+.st-skip-link:focus {
+  top: 20px;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Touch-friendly tap targets (min 44x44px for mobile) */
+@media (max-width: 991px) {
+  .st-nav-list a {
+    min-height: 44px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+  }
+  .st-btn {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+}
+
 body,
 html {
   color: #a9adb8;
@@ -46,6 +81,7 @@ html {
   font-weight: 400;
   line-height: 1.6em;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -540,13 +576,14 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 95px;
-  padding: 0 20px;
+  padding: 0 clamp(12px, 2%, 24px);
+  gap: clamp(0.5rem, 2%, 1.5rem);
 }
 
 .st-site-header.st-style1.st-transparent-header {
@@ -619,6 +656,7 @@ hr {
 @media screen and (min-width: 992px) {
   .st-main-header-in {
     flex-wrap: nowrap;
+    min-width: 0;
   }
   
   .st-main-header-left {
@@ -638,17 +676,17 @@ hr {
     min-width: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap;
   }
   
   .st-nav-center-wrap .st-nav-list {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
     display: flex !important;
     align-items: center;
     flex-wrap: nowrap !important;
     margin: 0;
     padding: 0;
-    min-width: min-content;
   }
   
   .st-nav-center-wrap .st-nav-list > li {
@@ -657,7 +695,7 @@ hr {
   }
   
   .st-nav-center-wrap .st-nav-list > li.st-nav-group {
-    margin-right: 38px;
+    margin-right: clamp(28px, 4%, 60px);
   }
   
   .st-nav-center-wrap .st-nav-list > li.st-nav-group:last-of-type {
@@ -665,14 +703,15 @@ hr {
   }
   
   .st-nav-center-wrap .st-nav-list > li > a {
-    font-size: 14px;
-    padding: 15px 0;
+    font-size: clamp(12px, 1.1vw, 14px);
+    padding: 15px clamp(10px, 1.2%, 18px);
     white-space: nowrap;
   }
   
   .st-nav-logo-item {
     margin-left: auto;
     margin-right: auto;
+    padding: 0 clamp(20px, 3%, 40px);
     list-style: none;
     flex-shrink: 0;
   }
@@ -682,24 +721,37 @@ hr {
   }
   
   .st-nav-logo-item .st-logo-img img {
-    height: 75px;
-    width: 75px;
+    height: clamp(55px, 6vw, 75px);
+    width: clamp(55px, 6vw, 75px);
   }
   
   .st-nav-logo-item .st-logo-text {
     font-size: 15px;
   }
   
+  /* 7/24 Destek - responsive % ve clamp ile */
+  .st-nav-social-icon {
+    display: flex;
+    align-items: center;
+    color: #fec544;
+    font-size: 18px;
+    margin-right: 14px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  .st-nav-social-icon:hover {
+    color: #fff;
+    opacity: 0.9;
+  }
   .st-nav-phone {
     flex-shrink: 0;
-    margin-left: 160px;
+    margin-left: clamp(1rem, 4%, 5rem);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 35px;
+    padding-left: clamp(0.5rem, 1.5%, 2rem);
     position: relative;
   }
   .st-nav-phone::before {
@@ -712,11 +764,12 @@ hr {
   }
   .st-nav-phone svg {
     fill: #ffffff;
-    width: 15px;
+    width: clamp(12px, 1.2vw, 15px);
   }
   .st-nav-phone .sp-phone-no {
-    padding-left: 15px;
+    padding-left: clamp(8px, 1%, 15px);
     color: #fec544;
+    font-size: clamp(12px, 1vw, 14px);
   }
 }
 
@@ -1006,7 +1059,8 @@ hr {
     position: relative;
   }
   .st-nav .sp-phone,
-  .st-nav-phone {
+  .st-nav-phone,
+  .st-nav-social-icon {
     display: none;
   }
   /*Mobile Menu Button*/
@@ -1753,6 +1807,7 @@ canvas {
   position: relative;
   z-index: 10;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .st-section-heading.st-style1 .st-section-heading-title::before {
