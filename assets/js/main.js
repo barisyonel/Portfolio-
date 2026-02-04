@@ -242,20 +242,37 @@
         var $submitBtn = $('#contact-form #submit');
         $submitBtn.prop('disabled', true);
 
+        function showSuccess() {
+          $('#name').val('');
+          $('#subject').val('');
+          $('#email').val('');
+          $('#msg').val('');
+          var alertHtml = '<div class="alert alert-success" style="display:block;background:#28a745;color:#fff;padding:16px;border-radius:8px;margin-bottom:20px;"><strong>Başarılı!</strong> Mesajınız gönderildi. En kısa sürede size dönüş yapacağım.</div>';
+          $('#st-alert').html(alertHtml).show().css('display', 'block');
+          $('#st-alert')[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(function () { $('#st-alert').fadeOut('slow'); }, 6000);
+        }
+
         $.ajax({
           type: "POST",
           url: "https://formspree.io/f/xkozdabp",
-          data: { name: name, _subject: subject || 'İletişim Formu', email: email, message: msg },
-          success: function (res) {
-            $('#name').val('');
-            $('#subject').val('');
-            $('#email').val('');
-            $('#msg').val('');
-            $('#st-alert').fadeIn().html('<div class="alert alert-success"><strong>Başarılı!</strong> Mesajınız gönderildi.</div>');
-            setTimeout(function () { $('#st-alert').fadeOut('slow'); }, 4000);
+          data: JSON.stringify({ name: name, _subject: subject || 'İletişim Formu', email: email, message: msg }),
+          contentType: "application/json",
+          dataType: "json",
+          headers: { 'Accept': 'application/json' },
+          success: function () {
+            showSuccess();
           },
-          error: function () {
-            $('#st-alert').fadeIn().html('<div class="alert alert-danger"><strong>Hata!</strong> Mesaj gönderilemedi. Lütfen <a href="mailto:takasan97@gmail.com" style="color:#fff;text-decoration:underline;">takasan97@gmail.com</a> adresine doğrudan yazın.</div>');
+          error: function (xhr) {
+            if (xhr.status === 200 || xhr.status === 201) {
+              showSuccess();
+              return;
+            }
+            var errMsg = 'Mesaj gönderilemedi. Lütfen <a href="mailto:takasan97@gmail.com" style="color:#fff;text-decoration:underline;">takasan97@gmail.com</a> adresine doğrudan yazın.';
+            if (xhr.responseJSON && xhr.responseJSON.error) {
+              errMsg = xhr.responseJSON.error;
+            }
+            $('#st-alert').fadeIn().html('<div class="alert alert-danger" style="background:#dc3545;color:#fff;padding:16px;border-radius:8px;"><strong>Hata!</strong> ' + errMsg + '</div>');
           },
           complete: function () {
             $submitBtn.prop('disabled', false);

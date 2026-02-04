@@ -3230,6 +3230,11 @@ canvas {
 #st-alert {
   font-size: 15px;
   font-weight: 300;
+  min-height: 0;
+  margin-bottom: 20px;
+}
+#st-alert .alert {
+  display: block !important;
 }
 
 .st-contact-title {
