@@ -778,6 +778,21 @@ hr {
   min-height: 72px;
 }
 
+.st-footer-social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.st-footer-social a {
+  color: #a0a8b8;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+.st-footer-social a:hover {
+  color: #fec544;
+}
+
 .st-footer-brand {
   display: inline-flex;
   align-items: center;
@@ -3235,6 +3250,10 @@ canvas {
 }
 #st-alert .alert {
   display: block !important;
+}
+
+.st-mb-30 {
+  margin-bottom: 30px;
 }
 
 .st-contact-title {
