@@ -28,6 +28,22 @@ Modern, responsive ve SEO uyumlu kişisel portfolyo sitesi. Tokat web tasarım v
 - Blog & SEO
 - İletişim Formu
 
+## Sayfalar ve URL’ler
+
+| Sayfa | URL |
+|-------|-----|
+| Ana sayfa | `https://www.bariscanyonel.com/` |
+| Blog liste | `https://www.bariscanyonel.com/blog/` |
+| Internet Sitesi Faydaları | `https://www.bariscanyonel.com/blog/internet-sitesi-faydalari.html` |
+| Tokat İşletmeciler Web Sitesi | `https://www.bariscanyonel.com/blog/tokat-isletmeciler-web-sitesi.html` |
+| Tokat Web Tasarım Rehberi | `https://www.bariscanyonel.com/blog/tokat-web-tasarim-rehberi.html` |
+| Tokat SEO İpuçları | `https://www.bariscanyonel.com/blog/tokat-seo-ipuclari.html` |
+| Tokat E-Ticaret | `https://www.bariscanyonel.com/blog/tokat-e-ticaret.html` |
+| Özel 404 | `404.html` (Vercel otomatik sunar) |
+
+- **Sitemap:** [sitemap.xml](https://www.bariscanyonel.com/sitemap.xml)  
+- **Robots:** [robots.txt](https://www.bariscanyonel.com/robots.txt)
+
 ## Kurulum
 
 ```bash

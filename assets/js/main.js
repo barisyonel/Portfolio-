@@ -76,11 +76,13 @@
     2. Dynamic Background
   --------------------------------------------------------------*/
   function dynamicBackground() {
-    // Background images
+    var supportsWebP = document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0;
     $('.st-dynamic-bg').each(function () {
+      var webpSrc = $(this).attr('data-src-webp');
       var src = $(this).attr('data-src');
+      var url = (supportsWebP && webpSrc) ? webpSrc : src;
       $(this).css({
-        'background-image': 'url(' + src + ')'
+        'background-image': 'url(' + url + ')'
       });
     });
   }
