@@ -143,6 +143,20 @@
 }
 .st-share-buttons a:hover { background: rgba(254,197,68,0.2); color: var(--blog-accent); }
 
+/* Yazar kutusu (E-E-A-T) */
+.st-author-box {
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--blog-card-radius);
+  border-left: 4px solid var(--blog-accent);
+  font-size: 0.95rem;
+  color: var(--blog-muted);
+}
+.st-author-box strong { color: #fff; }
+.st-author-box a { color: var(--blog-accent); text-decoration: none; }
+.st-author-box a:hover { text-decoration: underline; }
+
 /* İlgili yazılar */
 .st-related-posts { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
 .st-related-posts h3 { font-size: 1.25rem; margin-bottom: 1.5rem; }
