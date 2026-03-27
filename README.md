@@ -44,6 +44,15 @@ Modern, responsive ve SEO uyumlu kişisel portfolyo sitesi. Tokat web tasarım v
 - **Sitemap:** [sitemap.xml](https://www.bariscanyonel.com/sitemap.xml)  
 - **Robots:** [robots.txt](https://www.bariscanyonel.com/robots.txt)
 
+## Backlink Neden Düşük Görünüyor?
+
+**Backlink** = Başka sitelerin **sizin sitenize** verdiği linklerdir. Sizin sitede Polat Mermer, Yonel Oto, Balsan Papel, Tokat Sigorta vb. linkleri **dışarı veriyorsunuz** (outbound); bu, sizin backlink sayınızı artırmaz.
+
+**Backlink puanını yükseltmek için:**
+- Referans sitelerin (polatmermer.com, yonelotoyedekparca.com, balsanpapel.com, tokatsigorta.com) **sizin sitenize** link vermesi gerekir (örn. footer’da “Web tasarım: [Barış Can Yonel](https://www.bariscanyonel.com)”).
+- Müşterilerden bu linki eklemelerini rica edin; böylece gerçek **gelen backlink** oluşur.
+- Ek olarak: Google İşletmem, LinkedIn/Marketplace, yerel dizinler ve blog konuk yazıları da backlink kaynağı olabilir.
+
 ## Kurulum
 
 ```bash
