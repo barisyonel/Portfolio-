@@ -80,12 +80,20 @@
   <link rel="icon" type="image/png" href="https://www.bariscanyonel.com/assets/img/logo.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="https://www.bariscanyonel.com/assets/img/logo.png" />
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/slick.css" />
-  <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="assets/css/fontawesome.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/slick.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/lightgallery.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+  </noscript>
   <script>
     window.va =
       window.va ||
@@ -121,7 +129,7 @@
               <li class="st-nav-group st-nav-left"><a href="#portfolio" class="st-smooth-move">Projeler</a></li>
               <li class="st-nav-logo-item">
                 <a class="st-site-branding st-branding-desktop" href="https://www.bariscanyonel.com/">
-                  <span class="st-logo-img"><img src="assets/img/logo.png" alt="Barış Can Yonel" loading="lazy"></span>
+                  <span class="st-logo-img"><img src="assets/img/logo.png" alt="Barış Can Yonel" width="75" height="75" loading="lazy"></span>
                 </a>
               </li>
               <li class="st-nav-group st-nav-right"><a href="#blog" class="st-smooth-move">Referanslar</a></li>
@@ -150,7 +158,7 @@
   <section class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" data-src="https://www.bariscanyonel.com/assets/img/hero-bg-1.jpg" aria-labelledby="hero-heading">
     <div class="container">
       <div class="st-hero-text">
-        <div class="st-author"><img src="/assets/img/section/hero-img.jpg" alt="Barış Can Yonel - Tokat Web Tasarım Uzmanı" width="200" height="200" fetchpriority="high"></div>
+        <div class="st-author"><img src="/assets/img/section/hero-img.jpg" alt="Barış Can Yonel - Tokat Web Tasarım Uzmanı" width="200" height="200" fetchpriority="high" style="object-fit:cover;border-radius:50%;"></div>
         <h1 id="hero-heading">İşletmeniz İçin Profesyonel Web Sitesi ve E-Ticaret Çözümleri | Tokat</h1>
         <p>Kurumsal kimlik sitenizden online mağazanıza kadar, işletmenize değer katan web projeleri tasarlıyoruz. Mobil uyumlu, hızlı ve arama motorlarında üst sıralara çıkacak şekilde optimize edilmiş sitelerle dijital görünürlüğünüzü güçlendiriyoruz. <br>Ücretsiz keşif görüşmesi için hemen iletişime geçebilirsiniz.</p>
         <div class="st-hero-social-links">
@@ -174,6 +182,141 @@
     </div>
   </section>
   <!-- End Hero Seciton -->
+
+  <!-- Start Portfolio Seciton -->
+  <section id="portfolio">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <header class="st-section-heading st-style1">
+        <p class="st-section-heading-title" aria-hidden="true">PROJELER</p>
+        <h2 class="st-section-heading-subtitle">REFERANS PROJELER</h2>
+      </header>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://dalyanpalmiyeresort.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/dalyan.png" alt="Dalyan Palmiye Resort - Butik Otel Web Sitesi" width="400" height="300" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Dalyan Palmiye Resort</h5>
+                  <p>Next.js / Node.js / MySQL / Çoklu Dil Desteği</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://polatmermer.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/slider1.jpg" alt="Polat Mermer - Mermer Tasarımları" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Polat Mermer</h5>
+                  <p>Mermer Tasarımları / Kurumsal</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://yonelotoyedekparca.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/slider2.jpg" alt="Yonel Oto Yedek Parça - Kataloğu" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Yonel Oto Yedek Parça</h5>
+                  <p>Yedek Parça Kataloğu / Otomotiv</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://mygoldenfood.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/slider3.jpg" alt="Mygoldenfood - Sağlıklı Doğal Gıda" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Mygoldenfood</h5>
+                  <p>Gıda / E-Ticaret</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://balsanpapel.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/portfolio1.jpg" alt="Balsan Papel - Kereste Orman Ürünleri" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Balsan Papel</h5>
+                  <p>Kereste Orman Ürünleri / Responsive</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://metodmuhendislik.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/metod.png" alt="Metod Mühendislik" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Metod Mühendislik</h5>
+                  <p>Responsive Web Tasarım / Kurumsal</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="https://tokatsigorta.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/tokatsigorta.png" alt="Tokat Sigorta" loading="lazy">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-external-link-alt"></i>
+                  <h5>Tokat Sigorta</h5>
+                  <p>Responsive Web Tasarım / Sigorta</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 text-center">
+          <div class="st-portfolio-btn">
+            <a href="https://www.bariscanyonel.com/#projeler" class="st-btn st-style1 st-color1" target="_blank">Tüm Projeleri Gör</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Portfolio Seciton -->
 
   <!-- Start About Seciton -->
   <section id="about" class="st-about-wrap" itemscope itemtype="https://schema.org/AboutPage">
@@ -714,124 +857,7 @@
   </section>
   <!-- End Resume Seciton -->
 
-  <!-- Start Portfolio Seciton -->
-  <section id="portfolio">
-    <div class="st-height-b100 st-height-lg-b80"></div>
-    <div class="container">
-      <header class="st-section-heading st-style1">
-        <p class="st-section-heading-title" aria-hidden="true">PROJELER</p>
-        <h2 class="st-section-heading-subtitle">REFERANS PROJELER</h2>
-      </header>
-      <div class="st-height-b25 st-height-lg-b25"></div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://polatmermer.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/slider1.jpg" alt="Polat Mermer - Mermer Tasarımları" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Polat Mermer</h5>
-                  <p>Mermer Tasarımları / Kurumsal</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://yonelotoyedekparca.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/slider2.jpg" alt="Yonel Oto Yedek Parça - Kataloğu" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Yonel Oto Yedek Parça</h5>
-                  <p>Yedek Parça Kataloğu / Otomotiv</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://mygoldenfood.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/slider3.jpg" alt="Mygoldenfood - Sağlıklı Doğal Gıda" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Mygoldenfood</h5>
-                  <p>Gıda / E-Ticaret</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://balsanpapel.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/portfolio/portfolio1.jpg" alt="Balsan Papel - Kereste Orman Ürünleri" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Balsan Papel</h5>
-                  <p>Kereste Orman Ürünleri / Responsive</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://metodmuhendislik.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/metod.png" alt="Metod Mühendislik" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Metod Mühendislik</h5>
-                  <p>Responsive Web Tasarım / Kurumsal</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://tokatsigorta.com" target="_blank" rel="noopener" class="st-portfolio st-zoom">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="assets/img/tokatsigorta.png" alt="Tokat Sigorta" loading="lazy">
-                </div>
-                <div class="st-portfolio-item-hover">
-                  <i class="fas fa-external-link-alt"></i>
-                  <h5>Tokat Sigorta</h5>
-                  <p>Responsive Web Tasarım / Sigorta</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 text-center">
-          <div class="st-portfolio-btn">
-            <a href="https://www.bariscanyonel.com/#projeler" class="st-btn st-style1 st-color1" target="_blank">Tüm Projeleri Gör</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="st-height-b100 st-height-lg-b80"></div>
-  </section>
-  <!-- End Portfolio Seciton -->
+
 
   <!-- Start Review Seciton -->
   <section id="references" class="st-dark-bg">
