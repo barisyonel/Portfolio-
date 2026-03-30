@@ -257,8 +257,8 @@
 
         $.ajax({
           type: "POST",
-          url: "https://formspree.io/f/xkozdabp",
-          data: JSON.stringify({ name: name, _subject: subject || 'İletişim Formu', email: email, message: msg }),
+          url: "/api/contact",
+          data: JSON.stringify({ name: name, subject: subject || 'İletişim Formu', email: email, message: msg }),
           contentType: "application/json",
           dataType: "json",
           headers: { 'Accept': 'application/json' },
